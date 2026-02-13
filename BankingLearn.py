@@ -1,7 +1,6 @@
 from openpyxl import load_workbook, Workbook
 import os
-
-# ===== File Setup (Saves in same folder as Python file) =====
+#AI was used for learning purposes
 filename = input("Enter a name for your bank file (example: Accounts.xlsx): ")
 
 folder = os.path.dirname(os.path.abspath(__file__))
@@ -14,7 +13,6 @@ else:
     wb.active.append(["Name", "Password", "Balance", "Transactions"])
 
 sheet = wb.active
-# ============================================================
 
 
 def checkBalance(name):
@@ -127,3 +125,4 @@ while option < 7:
 wb.save(path)
 
 print(f"\nYour bank file is saved here:\n{path}")
+
